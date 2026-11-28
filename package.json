@@ -1,0 +1,1 @@
+{"name":"sabasute","private":true,"scripts":{"test":"node --test tests/*.test.js"},"version":"1.0.0"}
