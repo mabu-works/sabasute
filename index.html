@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サーバーステータス | まぶ鯖Bot群の稼働状況</title>
+<meta name="description" content="まぶ鯖・水無瀬組・夜凪鯖で動くBot群の稼働状況を公開するページです。">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0a0f1c">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<script>
+try {
+  var savedTheme = localStorage.getItem("sabasute-theme");
+  if (savedTheme === "light" || savedTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }
+} catch (e) { /* テーマ保存が使えない環境ではダークを既定にする */ }
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top">サーバーステータス</a>
+    <span class="nav-status"><span class="dot dot-unknown" id="navDot"></span><span id="navLabel">読み込み中</span></span>
+    <span class="topbar-links">
+      <a href="#servers-sec">サーバー</a>
+      <a href="#web-sec">Web</a>
+      <a href="#safety-sec">安全の仕組み</a>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="テーマ切り替え">🌙</button>
+    </span>
+  </div>
+</nav>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <p class="eyebrow">SERVER STATUS</p>
+    <h1>サーバーステータス</h1>
+    <p class="lead">まぶ鯖・水無瀬組・夜凪鯖で動く Bot 群と、公開中の Web サービスの稼働状況です。</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- 📊 全体の状況 -->
+  <section class="overall" id="overall" aria-label="全体の状況">
+    <p class="overall-status"><span class="dot dot-unknown" id="overallDot"></span><span id="overallLabel">読み込み中…</span></p>
+    <p class="overall-message" id="overallMessage"></p>
+    <p class="site-line" id="siteLine" hidden></p>
+    <p class="site-line" id="webLine" hidden></p>
+    <div class="summary-tiles" id="summaryTiles" hidden>
+      <div class="tile"><p class="tile-label">サーバー</p><p class="tile-value" id="tileServers">-</p></div>
+      <div class="tile"><p class="tile-label">Bot</p><p class="tile-value" id="tileBots">-</p></div>
+      <div class="tile"><p class="tile-label">Webサービス</p><p class="tile-value" id="tileWeb">-</p></div>
+    </div>
+    <p class="updated">最終更新: <span id="generatedAt">-</span>（このページは5分ごとに自動で再取得します）</p>
+  </section>
+
+  <!-- 🖥️ サーバー -->
+  <section id="servers-sec" aria-label="サーバーの状況">
+    <h2 class="sec-title">🖥️ サーバー</h2>
+    <div id="servers" class="servers"></div>
+  </section>
+
+  <!-- 🌐 Webサービス -->
+  <section class="web-services" id="web-sec" aria-label="Webサービスの状況">
+    <h2 class="sec-title">🌐 Webサービス</h2>
+    <p class="web-lead">Vercelで公開しているWebサービス24サイトの応答状況です（このページ自身と、上の全体状況にある まぶ鯖公式サイト は除いています）。計測: <span id="webCheckedAt">-</span> 時点</p>
+    <div id="webChips" class="web-groups"></div>
+  </section>
+
+  <!-- 🛡️ 安全の仕組み -->
+  <section class="safety" id="safety-sec" aria-label="安全の仕組み">
+    <h2 class="sec-title">🛡️ 安全の仕組み</h2>
+    <p class="safety-lead">Bot を止めないために、接続の制限・自動復旧・監視・バックアップの4つの層で守っています。</p>
+    <div class="safety-grid">
+      <article class="safety-card">
+        <h3>🔒 接続の制限</h3>
+        <ul>
+          <li>サーバーへの接続は、暗号化された専用ネットワーク（Tailscale）経由だけに限定しています</li>
+          <li>公開インターネットからの SSH 接続は遮断しています</li>
+          <li>ログインは鍵認証のみで、パスワードでは入れません</li>
+          <li>クラウド側のファイアウォールでも、専用ネットワーク用の通信だけを許可しています</li>
+        </ul>
+      </article>
+      <article class="safety-card">
+        <h3>🔁 自動復旧</h3>
+        <ul>
+          <li>サーバー内の見守り役（server-guard）が5分ごとにプロセスを確認し、止まっていたら自動で再起動します</li>
+          <li>Bot 自身にも接続の見張りがあり、Discord から切れたら自動で立て直します</li>
+          <li>大きくなりすぎたログは自動で切り詰め、ディスクを圧迫しません</li>
+          <li>サーバーが再起動しても、Bot は自動で起動します</li>
+        </ul>
+      </article>
+      <article class="safety-card">
+        <h3>👀 監視</h3>
+        <ul>
+          <li>10分ごとに外側から全サーバーの状態を確認し、結果を運用側へ自動で知らせています</li>
+          <li>30分ごとの詳細チェックでは、ディスク・メモリ・プロセス・応答時間（Ping）などを確認します</li>
+          <li>異常があれば、運用側の Discord と Slack にすぐ通知されます</li>
+          <li>このページも、確認した状況の一部を公開しているものです</li>
+        </ul>
+      </article>
+      <article class="safety-card">
+        <h3>💾 バックアップと復旧</h3>
+        <ul>
+          <li>Bot のデータと復旧手順は、サーバーの外にもバックアップしています</li>
+          <li>サーバーが失われても、同じ構成で再構築できる手順を整えています</li>
+          <li>2026年11月20日には、実際に3台すべてのサーバーを再構築して復旧しました</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <p class="fetch-error" id="fetchError" hidden>状況データを取得できませんでした。時間をおいて再読み込みしてください。</p>
+
+  <!-- ℹ️ このページについて -->
+  <section class="about">
+    <h2 class="sec-title">このページについて</h2>
+    <p>Bot を動かしているサーバー3台（minase / mabu / yanagi）の状態と、Vercel で公開している Web サービスの応答状況をまとめた公開ページです。障害やメンテナンスの際は、まずここで状況を確認できます。</p>
+    <p>コミュニティ「まぶ鯖」の公式サイトは <a href="https://mabusaba.vercel.app">mabusaba.vercel.app</a> です。</p>
+  </section>
+</main>
+
+<footer class="site-footer wrap">
+  <p>サーバーステータス / まぶ鯖 Bot群の稼働状況</p>
+</footer>
+
+<script src="status-core.js"></script>
+<script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+{
+  "generatedAt": "2026-11-25T17:45:16+09:00",
+  "overall": {
+    "status": "online",
+    "label": "稼働中",
+    "message": "4台すべてのサーバーとBotが稼働中です。"
+  },
+  "servers": [
+    {
+      "bots": [
+        {
+          "name": "水無瀬組 (suzushiro)",
+          "status": "online"
+        },
+        {
+          "name": "SN Server Notice (logbot)",
+          "status": "online"
+        },
+        {
+          "name": "lolbot",
+          "status": "online"
+        },
+        {
+          "name": "Chat Topic Bot",
+          "status": "online"
+        },
+        {
+          "name": "Fake Tweet Bot",
+          "status": "online"
+        },
+        {
+          "name": "Playlist Pool Bot",
+          "status": "online"
+        },
+        {
+          "name": "Event Recruit Bot",
+          "status": "online"
+        },
+        {
+          "name": "Make It a Quote Py",
+          "status": "online"
+        }
+      ],
+      "id": "minase",
+      "name": "minase",
+      "role": "水無瀬組＆ServerNotice＆lolbot＆ツール系",
+      "status": "online",
+      "metrics": {
+        "checkedAt": "2026-11-25T17:37:02+09:00",
+        "uptime": "23時間47分",
+        "pingDiscordMs": 9.873,
+        "pingDiscordLoss": 0,
+        "ping11Ms": 12.177,
+        "ping11Loss": 0,
+        "cpuPercent": 4.8,
+        "loadAvg": "0.22 / 0.09 / 0.03",
+        "memoryUsedMb": 675,
+        "memoryTotalMb": 960,
+        "memoryFreePercent": 29.6,
+        "swapPercent": 4.6,
+        "diskPercent": 10,
+        "diskUsedGb": 9.3,
+        "diskTotalGb": 99,
+        "diskFreeGb": 85,
+        "inodePercent": 4,
+        "processes": 134,
+        "zombies": 0,
+        "systemdFailed": 0,
+        "oom": 0,
+        "pm2LogSize": "80K",
+        "varLogSize": "65.5M"
+      }
+    },
+    {
+      "bots": [
+        {
+          "name": "まぶさば (mabubot)",
+          "status": "online"
+        },
+        {
+          "name": "まぶのゲーム (mabubot-play)",
+          "status": "online"
+        },
+        {
+          "name": "まぶのみまもり (mabubot-guard)",
+          "status": "online"
+        },
+        {
+          "name": "まぶのおてつだい (mabubot-ops)",
+          "status": "online"
+        },
+        {
+          "name": "Aegis",
+          "status": "online"
+        },
+        {
+          "name": "Make It a Quote",
+          "status": "online"
+        }
+      ],
+      "id": "mabu",
+      "name": "mabu",
+      "role": "まぶ鯖系＆Aegis＆クォート",
+      "status": "online",
+      "metrics": {
+        "checkedAt": "2026-11-25T17:37:10+09:00",
+        "uptime": "23時間46分",
+        "pingDiscordMs": 12.567,
+        "pingDiscordLoss": 0,
+        "ping11Ms": 12.898,
+        "ping11Loss": 0,
+        "cpuPercent": 4.8,
+        "loadAvg": "0.01 / 0.02 / 0.00",
+        "memoryUsedMb": 583,
+        "memoryTotalMb": 960,
+        "memoryFreePercent": 39.2,
+        "swapPercent": 8,
+        "diskPercent": 11,
+        "diskUsedGb": 11,
+        "diskTotalGb": 99,
+        "diskFreeGb": 84,
+        "inodePercent": 4,
+        "processes": 133,
+        "zombies": 0,
+        "systemdFailed": 0,
+        "oom": 0,
+        "pm2LogSize": "104K",
+        "varLogSize": "73.9M"
+      }
+    },
+    {
+      "bots": [
+        {
+          "name": "p1228",
+          "status": "online"
+        },
+        {
+          "name": "VOICEVOX（読み上げ）",
+          "status": "online"
+        },
+        {
+          "name": "ローカルAI (llama)",
+          "status": "online"
+        }
+      ],
+      "id": "yanagi",
+      "name": "yanagi",
+      "note": "VOICEVOX 0.26.1 / ローカルAI ともに応答あり",
+      "role": "p1228系",
+      "status": "online",
+      "metrics": {
+        "checkedAt": "2026-11-25T17:37:18+09:00",
+        "uptime": "23時間46分",
+        "pingDiscordMs": 15.167,
+        "pingDiscordLoss": 0,
+        "ping11Ms": 7.483,
+        "ping11Loss": 0,
+        "cpuPercent": 4.5,
+        "loadAvg": "0.17 / 0.05 / 0.01",
+        "memoryUsedMb": 500,
+        "memoryTotalMb": 960,
+        "memoryFreePercent": 47.8,
+        "swapPercent": 7.8,
+        "diskPercent": 15,
+        "diskUsedGb": 14,
+        "diskTotalGb": 99,
+        "diskFreeGb": 81,
+        "inodePercent": 4,
+        "processes": 132,
+        "zombies": 0,
+        "systemdFailed": 0,
+        "oom": 0,
+        "pm2LogSize": "800K",
+        "varLogSize": "66.6M"
+      }
+    },
+    {
+      "bots": [
+        {
+          "name": "のりかえや (norikaeya)",
+          "status": "online"
+        },
+        {
+          "name": "Caddy",
+          "status": "online"
+        },
+        {
+          "name": "WireGuard",
+          "status": "online"
+        },
+        {
+          "name": "AdGuard Home",
+          "status": "online"
+        },
+        {
+          "name": "filebrowser",
+          "status": "online"
+        },
+        {
+          "name": "SMB共有 (smbd)",
+          "status": "online"
+        }
+      ],
+      "id": "kura",
+      "name": "kura",
+      "role": "ユーティリティ（保存・VPN・DNS・ルート検索）",
+      "status": "online",
+      "metrics": {
+        "checkedAt": "2026-11-25T17:37:27+09:00",
+        "uptime": "3時間24分",
+        "pingDiscordMs": 16.717,
+        "pingDiscordLoss": 0,
+        "ping11Ms": 10.915,
+        "ping11Loss": 0,
+        "cpuPercent": 4.8,
+        "loadAvg": "0.16 / 0.08 / 0.02",
+        "memoryUsedMb": 502,
+        "memoryTotalMb": 960,
+        "memoryFreePercent": 47.7,
+        "swapPercent": 0.3,
+        "diskPercent": 7,
+        "diskUsedGb": 5.8,
+        "diskTotalGb": 99,
+        "diskFreeGb": 89,
+        "inodePercent": 3,
+        "processes": 135,
+        "zombies": 0,
+        "systemdFailed": 0,
+        "oom": 0,
+        "pm2LogSize": "なし（未導入）",
+        "varLogSize": "16.8M"
+      }
+    }
+  ],
+  "site": {
+    "name": "まぶ鯖公式サイト",
+    "url": "https://mabusaba.vercel.app",
+    "status": "online",
+    "responseMs": 1235,
+    "uptime24hPercent": 100
+  },
+  "webServices": {
+    "checkedAt": "2026-11-20T18:34:43+09:00",
+    "items": [
+      {
+        "name": "ポートフォリオ",
+        "url": "https://mabu.vercel.app/",
+        "status": "online",
+        "responseMs": 1402,
+        "cat": "portfolio"
+      },
+      {
+        "name": "防災情報Web",
+        "url": "https://bosai.vercel.app/",
+        "status": "online",
+        "responseMs": 1216,
+        "cat": "kurashi"
+      },
+      {
+        "name": "電車の運行情報",
+        "url": "https://densha.vercel.app/info/",
+        "status": "online",
+        "responseMs": 1164,
+        "cat": "kurashi"
+      },
+      {
+        "name": "環境音ミキサー",
+        "url": "https://otoya.vercel.app/",
+        "status": "online",
+        "responseMs": 1456,
+        "cat": "kurashi"
+      },
+      {
+        "name": "タイピング練習",
+        "url": "https://taipingu.vercel.app/",
+        "status": "online",
+        "responseMs": 1272,
+        "cat": "kurashi"
+      },
+      {
+        "name": "集中タイマー",
+        "url": "https://shuchuya.vercel.app/",
+        "status": "online",
+        "responseMs": 1385,
+        "cat": "kurashi"
+      },
+      {
+        "name": "QRコードメーカー",
+        "url": "https://qruya.vercel.app/",
+        "status": "online",
+        "responseMs": 903,
+        "cat": "kurashi"
+      },
+      {
+        "name": "席替え",
+        "url": "https://sekiya.vercel.app/",
+        "status": "online",
+        "responseMs": 1124,
+        "cat": "kurashi"
+      },
+      {
+        "name": "パスワード生成",
+        "url": "https://pasuya.vercel.app/",
+        "status": "online",
+        "responseMs": 1098,
+        "cat": "kurashi"
+      },
+      {
+        "name": "Quote画像",
+        "url": "https://miaq.vercel.app/",
+        "status": "online",
+        "responseMs": 937,
+        "cat": "gazou"
+      },
+      {
+        "name": "Fake Tweet",
+        "url": "https://nisetsui.vercel.app/",
+        "status": "online",
+        "responseMs": 867,
+        "cat": "gazou"
+      },
+      {
+        "name": "架空プロフィール",
+        "url": "https://kakupro.vercel.app/",
+        "status": "online",
+        "responseMs": 1356,
+        "cat": "gazou"
+      },
+      {
+        "name": "ドクカキ",
+        "url": "https://dokukaki.vercel.app/",
+        "status": "online",
+        "responseMs": 692,
+        "cat": "gazou"
+      },
+      {
+        "name": "画像モザイク",
+        "url": "https://mozaya.vercel.app/",
+        "status": "online",
+        "responseMs": 1140,
+        "cat": "gazou"
+      },
+      {
+        "name": "カラーパレット",
+        "url": "https://iropare.vercel.app/",
+        "status": "online",
+        "responseMs": 903,
+        "cat": "gazou"
+      },
+      {
+        "name": "診断メーカー",
+        "url": "https://shindanya.vercel.app/",
+        "status": "online",
+        "responseMs": 782,
+        "cat": "uranai"
+      },
+      {
+        "name": "おみくじ",
+        "url": "https://mikuji.vercel.app/",
+        "status": "online",
+        "responseMs": 934,
+        "cat": "uranai"
+      },
+      {
+        "name": "話題ガチャ",
+        "url": "https://wadaiya.vercel.app/",
+        "status": "online",
+        "responseMs": 761,
+        "cat": "asobi"
+      },
+      {
+        "name": "あみだくじ",
+        "url": "https://amidaya.vercel.app/",
+        "status": "online",
+        "responseMs": 970,
+        "cat": "asobi"
+      },
+      {
+        "name": "ルーレット",
+        "url": "https://ruletto.vercel.app/",
+        "status": "online",
+        "responseMs": 871,
+        "cat": "asobi"
+      },
+      {
+        "name": "暗号・謎解き",
+        "url": "https://nazoya.vercel.app/",
+        "status": "online",
+        "responseMs": 933,
+        "cat": "asobi"
+      },
+      {
+        "name": "ミニゲーム集",
+        "url": "https://chibigame.vercel.app/",
+        "status": "online",
+        "responseMs": 930,
+        "cat": "asobi"
+      },
+      {
+        "name": "抽選ツール",
+        "url": "https://kujiya.vercel.app/",
+        "status": "online",
+        "responseMs": 968,
+        "cat": "asobi"
+      },
+      {
+        "name": "グループ分け",
+        "url": "https://wakeya.vercel.app/",
+        "status": "online",
+        "responseMs": 740,
+        "cat": "asobi"
+      }
+    ]
+  }
+}
